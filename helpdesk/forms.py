@@ -359,7 +359,8 @@ class PublicTicketForm(AbstractTicketForm):
         label=_('Your E-Mail Address'),
         help_text=_('We will e-mail you when your ticket is updated.'),
     )
-    captcha = ReCaptchaField() # NOTE Captcha on submit ticket
+    # Anmol
+    #  captcha = ReCaptchaField() # NOTE Captcha on submit ticket
     def __init__(self, *args, **kwargs):
         """
         Add any (non-staff) custom fields that are defined to the form

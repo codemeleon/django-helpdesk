@@ -41,7 +41,7 @@
 
             <div class="form-group {% if field.errors %}has-error{% endif %}">
                 <label class="control-label" for='id_{{ field.name }}'>{{ field.label }}</label>{% if not field.field.required %} <span class='form_optional'>{% trans "(Optional)" %}</span>{% endif %}</dt>
-                <div class="input-group">{{ field }}</div>
+                <div class="input-group">Test{{ field }}</div>
                 {% if field.errors %}<div class="help-block">{{ field.errors }}</div>{% endif %}
                 {% if field.help_text %}<span class='fhelp-block'>{{ field.help_text }}</span>{% endif %}
             </div>

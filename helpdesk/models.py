@@ -8,16 +8,37 @@ models.py - Model (and hence database) definitions. This is the core of the
 """
 
 from __future__ import unicode_literals
+
+import re
+
+from django.conf import settings
 from django.contrib.auth.models import Permission
 from django.contrib.contenttypes.models import ContentType
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import models
-from django.conf import settings
-from django.utils import timezone
-from django.utils import six
-from django.utils.translation import ugettext_lazy as _, ugettext
+from django.utils import six, timezone
 from django.utils.encoding import python_2_unicode_compatible
-import re
+from django.utils.translation import ugettext
+from django.utils.translation import ugettext_lazy as _
+
+# Added by Anmol
+
+#  class Register(models.Model):
+#      """
+#      For registering the new user.
+#      """
+#
+#      first_name = models.CharField()
+#      middle_name = models.CharField()
+#      sur_name = models.CharField()
+#      email = models.EmailField()
+#      password = models.Password()
+#      recovery_query = models.Choices()
+#      recovery_answer = models.CharField()
+#
+
+## End of Added by Anmol
+
 
 
 @python_2_unicode_compatible
