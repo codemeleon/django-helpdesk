@@ -54,14 +54,14 @@
 
             <div class="row" style="position: relative;">
                 <div id="sp-logo" class="col-xs-9 col-sm-10 col-md-3">
-                    <div class="sp-column ">
+                    <a class="h3a logo" href="/">
                         <img class=" sp-default-logo hidden-xs" src="https://www.h3abionet.org/images/logos/LOGO-HEADER.png" alt="H3ABioNet">
 {#                        <img class=" sp-retina-logo hidden-xs" src="https://www.h3abionet.org/images/logos/LOGO-HEADER.png" alt="H3ABioNet" width="625" height="158">#}
 {#                        <img class="sp-default-logo visible-xs-block" src="https://www.h3abionet.org/images/logos/Asset-1H3Abionet_logo_stack.png" alt="H3ABioNet"></a>#}
-                        <div>
-                            <img class="h3a-slogan" src="https://www.h3abionet.org/images/logos/h3a-slogan.png" alt="H3ABioNet">
-                        </div>
-                    </div>
+												<div>
+														<img class="h3a-slogan" src="https://www.h3abionet.org/images/logos/h3a-slogan.png" alt="H3ABioNet">
+												</div>
+                    </a>
                 </div>
 {#                <div id="sp-menu" class="col-xs-1 col-sm-1 col-md-8" style="position: static;">#}
 {#                    <div class="sp-column ">#}
@@ -273,7 +273,7 @@
                     <form class="navbar-form navbar-top" id='searchform' method='get' action="{% url 'helpdesk:list' %}">
                         <div class="input-group custom-search-form">
                             <input type='text' name='q' size='15' class='input form-control' placeholder='{% trans "Search..." %}' id='search_query' title='{% trans "Enter a keyword, or a ticket number to jump straight to that ticket." %}'/>
-                            <input type='hidden' name='status' value='1' /><input type='hidden' name='status' value='2' /><input type='hidden' name='status' value='3' /><input type='hidden' name='search_type' value='header' />
+                            {% comment %} <input type='hidden' name='status' value='1' /><input type='hidden' name='status' value='2' /><input type='hidden' name='status' value='3' /><input type='hidden' name='search_type' value='header' /> {% endcomment %}
                             <span class="input-group-btn">
                                 <button class="btn btn-default" type="submit">
                                     <i class="fa fa-search"></i> {% trans 'Go' %}
@@ -328,4 +328,3 @@
             {% endif %}
             </div>
         </nav>
-
